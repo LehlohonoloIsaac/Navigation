@@ -1,1 +1,1 @@
-# Navigation
+[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5a2654f310d58300016832a6&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5a2654f310d58300016832a6/build/latest?branch=master)
