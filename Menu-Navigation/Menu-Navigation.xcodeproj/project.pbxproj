@@ -172,6 +172,7 @@
 				EDCDAE7D1FD68DFF003ED053 /* Resources */,
 				138DA29A0E9A992824D33510 /* [CP] Embed Pods Frameworks */,
 				3A90C70266F9785A5E096F0E /* [CP] Copy Pods Resources */,
+				ED88EAC21FD69C4C00693F7A /* SwiftLint Run Script */,
 			);
 			buildRules = (
 			);
@@ -441,6 +442,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Menu-NavigationUITests/Pods-Menu-NavigationUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		ED88EAC21FD69C4C00693F7A /* SwiftLint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
