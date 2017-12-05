@@ -1,0 +1,22 @@
+
+ platform :ios, '9.0'
+
+target 'Menu-Navigation' do
+  use_frameworks!
+
+  # Pods for Menu-Navigation
+  pod 'SwiftLint'
+
+  target 'Menu-NavigationTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'SwiftLint'
+  end
+
+  target 'Menu-NavigationUITests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'SwiftLint'
+  end
+
+end
