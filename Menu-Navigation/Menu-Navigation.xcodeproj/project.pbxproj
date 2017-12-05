@@ -10,6 +10,11 @@
 		1C1970EEC8C71C8E6C5FFF56 /* Pods_Menu_NavigationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAD32D19C63FD408BE55B377 /* Pods_Menu_NavigationUITests.framework */; };
 		8ED15FB8AC55DE87D04997EA /* Pods_Menu_NavigationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C116D0A7BC802EB2732387 /* Pods_Menu_NavigationTests.framework */; };
 		D5335F2C88EEAEB7ECF27F95 /* Pods_Menu_Navigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE7156DFD4F4EF2E541BE59 /* Pods_Menu_Navigation.framework */; };
+		ED88EAC41FD69F7100693F7A /* MenuNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED88EAC31FD69F7000693F7A /* MenuNavigationView.xib */; };
+		ED88EAC71FD69FE900693F7A /* MenuNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88EAC61FD69FE900693F7A /* MenuNavigationView.swift */; };
+		ED88EAC91FD6D19500693F7A /* MenuNavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88EAC81FD6D19500693F7A /* MenuNavigationViewModel.swift */; };
+		ED88EAD01FD6DD0900693F7A /* NavigationDrawerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88EACF1FD6DD0900693F7A /* NavigationDrawerUITests.swift */; };
+		ED88EAD31FD6DEDF00693F7A /* MenuNavigationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED88EAD21FD6DEDF00693F7A /* MenuNavigationViewModelTests.swift */; };
 		EDCDAE831FD68DFF003ED053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDAE821FD68DFF003ED053 /* AppDelegate.swift */; };
 		EDCDAE851FD68DFF003ED053 /* MenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDCDAE841FD68DFF003ED053 /* MenuNavigationController.swift */; };
 		EDCDAE881FD68DFF003ED053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDCDAE861FD68DFF003ED053 /* Main.storyboard */; };
@@ -43,6 +48,11 @@
 		9CE7156DFD4F4EF2E541BE59 /* Pods_Menu_Navigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Menu_Navigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6C116D0A7BC802EB2732387 /* Pods_Menu_NavigationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Menu_NavigationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAD32D19C63FD408BE55B377 /* Pods_Menu_NavigationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Menu_NavigationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED88EAC31FD69F7000693F7A /* MenuNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuNavigationView.xib; sourceTree = "<group>"; };
+		ED88EAC61FD69FE900693F7A /* MenuNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigationView.swift; sourceTree = "<group>"; };
+		ED88EAC81FD6D19500693F7A /* MenuNavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigationViewModel.swift; sourceTree = "<group>"; };
+		ED88EACF1FD6DD0900693F7A /* NavigationDrawerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDrawerUITests.swift; sourceTree = "<group>"; };
+		ED88EAD21FD6DEDF00693F7A /* MenuNavigationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigationViewModelTests.swift; sourceTree = "<group>"; };
 		EDCDAE7F1FD68DFF003ED053 /* Menu-Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu-Navigation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCDAE821FD68DFF003ED053 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDCDAE841FD68DFF003ED053 /* MenuNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuNavigationController.swift; sourceTree = "<group>"; };
@@ -108,6 +118,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		ED88EAC51FD69F9300693F7A /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED88EAC31FD69F7000693F7A /* MenuNavigationView.xib */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		ED88EACA1FD6DC6200693F7A /* NavigationDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				ED88EACC1FD6DC7A00693F7A /* ViewModel */,
+				ED88EACB1FD6DC7200693F7A /* View */,
+			);
+			path = NavigationDrawer;
+			sourceTree = "<group>";
+		};
+		ED88EACB1FD6DC7200693F7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED88EAC61FD69FE900693F7A /* MenuNavigationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ED88EACC1FD6DC7A00693F7A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ED88EAC81FD6D19500693F7A /* MenuNavigationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EDCDAE761FD68DFF003ED053 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +176,8 @@
 		EDCDAE811FD68DFF003ED053 /* Menu-Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				ED88EACA1FD6DC6200693F7A /* NavigationDrawer */,
+				ED88EAC51FD69F9300693F7A /* Custom Views */,
 				EDCDAE821FD68DFF003ED053 /* AppDelegate.swift */,
 				EDCDAE841FD68DFF003ED053 /* MenuNavigationController.swift */,
 				EDCDAE861FD68DFF003ED053 /* Main.storyboard */,
@@ -147,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				EDCDAE991FD68DFF003ED053 /* Info.plist */,
+				ED88EAD21FD6DEDF00693F7A /* MenuNavigationViewModelTests.swift */,
 			);
 			path = "Menu-NavigationTests";
 			sourceTree = "<group>";
@@ -155,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				EDCDAEA41FD68DFF003ED053 /* Info.plist */,
+				ED88EACF1FD6DD0900693F7A /* NavigationDrawerUITests.swift */,
 			);
 			path = "Menu-NavigationUITests";
 			sourceTree = "<group>";
@@ -241,11 +288,13 @@
 					};
 					EDCDAE921FD68DFF003ED053 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = EDCDAE7E1FD68DFF003ED053;
 					};
 					EDCDAE9D1FD68DFF003ED053 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						TestTargetID = EDCDAE7E1FD68DFF003ED053;
 					};
@@ -279,6 +328,7 @@
 				EDCDAE8D1FD68DFF003ED053 /* LaunchScreen.storyboard in Resources */,
 				EDCDAE8A1FD68DFF003ED053 /* Assets.xcassets in Resources */,
 				EDCDAE881FD68DFF003ED053 /* Main.storyboard in Resources */,
+				ED88EAC41FD69F7100693F7A /* MenuNavigationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +515,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDCDAE851FD68DFF003ED053 /* MenuNavigationController.swift in Sources */,
+				ED88EAC91FD6D19500693F7A /* MenuNavigationViewModel.swift in Sources */,
 				EDCDAE831FD68DFF003ED053 /* AppDelegate.swift in Sources */,
+				ED88EAC71FD69FE900693F7A /* MenuNavigationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED88EAD31FD6DEDF00693F7A /* MenuNavigationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED88EAD01FD6DD0900693F7A /* NavigationDrawerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,11 +717,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Menu-NavigationTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Menu-NavigationTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menu-Navigation.app/Menu-Navigation";
@@ -680,6 +736,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Menu-NavigationTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -696,11 +753,13 @@
 			baseConfigurationReference = 614DFE227F5A5C24AE07D104 /* Pods-Menu-NavigationUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Menu-NavigationUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "za.co.dvt.Menu-NavigationUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Menu-Navigation";
@@ -712,6 +771,7 @@
 			baseConfigurationReference = EDDD5249A031771A1F64A8E0 /* Pods-Menu-NavigationUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Menu-NavigationUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
