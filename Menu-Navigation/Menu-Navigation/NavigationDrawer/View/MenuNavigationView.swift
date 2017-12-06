@@ -32,6 +32,14 @@ class MenuNavigationView: UIView {
         setUpViews()
     }
     
+    var width: CGFloat {
+        return self.menuNavigationViewModel.navigationDrawerWidth
+    }
+    
+    var height: CGFloat {
+        return self.menuNavigationViewModel.navigationDrawerHeight
+    }
+    
     private func setUpViews() {
          self.menuNavigationViewModel = MenuNavigationViewModel()
         let nib = UINib(nibName: "MenuNavigationView", bundle: nil)
