@@ -10,20 +10,22 @@ import UIKit
 
 class MenuNavigationController: UIViewController {
 
-    private var navigationView: MenuNavigationView!
+    @IBOutlet weak var navigationView: MenuNavigationView!
+    var isNavigationDrawerVisible: Bool = false
+    
+    @IBOutlet weak var navigationDrawerLeadingConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
-        addMenuNavigationDrawer()
-    }
-    
-    func addMenuNavigationDrawer() {
-        navigationView = MenuNavigationView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height))
-        view.addSubview(navigationView)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateScreen()
+        if isNavigationDrawerVisible {
+            self.navigationDrawerLeadingConstraint.constant = 0
+        } else {
+            self.navigationDrawerLeadingConstraint.constant = -self.navigationView.width
+        }
     }
     
     func updateScreen() {
@@ -33,5 +35,12 @@ class MenuNavigationController: UIViewController {
     
     @IBAction func onSlideNavigationDrawer(_ sender: Any) {
         print("onSlideNavigationDrawer clicked")
+        if self.isNavigationDrawerVisible {
+            self.navigationDrawerLeadingConstraint.constant = -self.navigationView.width
+        } else {
+            self.navigationDrawerLeadingConstraint.constant = 0
+        }
+        self.isNavigationDrawerVisible = !self.isNavigationDrawerVisible
     }
+    
 }

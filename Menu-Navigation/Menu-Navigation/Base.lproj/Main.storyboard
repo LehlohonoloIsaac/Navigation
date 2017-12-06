@@ -16,7 +16,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YvN-Ts-sc3" customClass="MenuNavigationView" customModule="Menu_Navigation" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="40" height="603"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="UaY-3F-PHd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YvN-Ts-sc3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1mo-HO-FKk"/>
+                            <constraint firstItem="YvN-Ts-sc3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="L8u-pY-ivk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YvN-Ts-sc3" secondAttribute="bottom" id="gL6-zc-3cm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Navigation Drawer" id="Hxh-QO-LwV">
@@ -26,6 +40,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="navigationDrawerLeadingConstraint" destination="1mo-HO-FKk" id="GXt-8I-JRS"/>
+                        <outlet property="navigationView" destination="YvN-Ts-sc3" id="yrf-mK-ABK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
