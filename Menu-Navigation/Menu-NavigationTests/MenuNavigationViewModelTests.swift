@@ -24,21 +24,21 @@ class MenuNavigationViewModelTests: XCTestCase {
     
     func testThatWhenTheNavigationDrawerHasWidthWhenUpdatedWithFrameOfWidth100() {
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        self.menuNavigationViewModel.updateFrame(with: frame)
+        self.menuNavigationViewModel.updateFrame(with: frame) {}
         let expectedWidth: CGFloat = 100/2 + 100/4
         XCTAssertEqual(expectedWidth, menuNavigationViewModel.navigationDrawerWidth)
     }
     
     func testThatWhenTheNavigationDrawerHasWidthWhenUpdatedWithFrameOfHeight100() {
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        self.menuNavigationViewModel.updateFrame(with: frame)
+        self.menuNavigationViewModel.updateFrame(with: frame) {}
         let expectedHeight: CGFloat = 100
         XCTAssertEqual(expectedHeight, menuNavigationViewModel.navigationDrawerHeight)
     }
     
     func testThatTheCustomFrameGetsUpdatedCorrectly() {
         let frame = CGRect(x: 0, y: 0, width: 100, height: 100)
-        self.menuNavigationViewModel.updateFrame(with: frame)
+        self.menuNavigationViewModel.updateFrame(with: frame) {}
         let expectedCustomFrame = CGRect(x: 0, y: 0, width: (100/2 + 100/4), height: 100)
         XCTAssertEqual(expectedCustomFrame, menuNavigationViewModel.customFrame)
     }

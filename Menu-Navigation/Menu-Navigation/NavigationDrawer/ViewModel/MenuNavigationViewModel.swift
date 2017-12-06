@@ -39,7 +39,7 @@ struct MenuNavigationViewModel {
         set { self._customFrame = newValue}
     }
     
-    mutating func updateFrame(with newFrame: CGRect) {
+    mutating func updateFrame(with newFrame: CGRect, completed: @escaping () -> Void) {
         if isLandscapeMode {
             navigationDrawerWidth = newFrame.width/2
         } else {
@@ -47,5 +47,6 @@ struct MenuNavigationViewModel {
         }
         navigationDrawerHeight = newFrame.height
         customFrame = CGRect(x: 0, y: 0, width: navigationDrawerWidth, height: navigationDrawerHeight)
+        completed()
     }
 }

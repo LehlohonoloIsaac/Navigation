@@ -32,17 +32,31 @@ class MenuNavigationView: UIView {
         setUpViews()
     }
     
+    var width: CGFloat {
+        return self.menuNavigationViewModel.navigationDrawerWidth
+    }
+    
+    var height: CGFloat {
+        return self.menuNavigationViewModel.navigationDrawerHeight
+    }
+    
     private func setUpViews() {
          self.menuNavigationViewModel = MenuNavigationViewModel()
         let nib = UINib(nibName: "MenuNavigationView", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
-        self.menuNavigationViewModel.updateFrame(with: bounds)
-        contentView.frame = self.menuNavigationViewModel.customFrame
+        self.menuNavigationViewModel.updateFrame(with: bounds) { [unowned self] in
+            DispatchQueue.main.async {
+                self.contentView.frame = self.menuNavigationViewModel.customFrame
+            }
+        }
         addSubview(contentView)
     }
 
     func onScreenOrientationChangeWith(newFrame: CGRect) {
-        self.menuNavigationViewModel.updateFrame(with: newFrame)
-        self.contentView.frame = self.menuNavigationViewModel.customFrame
+        self.menuNavigationViewModel.updateFrame(with: newFrame) { [unowned self] in
+            DispatchQueue.main.async {
+                self.contentView.frame = self.menuNavigationViewModel.customFrame
+            }
+        }
     }
 }
